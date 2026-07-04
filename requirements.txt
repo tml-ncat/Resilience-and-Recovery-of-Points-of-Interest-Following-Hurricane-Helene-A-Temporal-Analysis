@@ -1,0 +1,31 @@
+# Core data science and plotting
+jupyter
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+tqdm
+joblib
+
+# Machine learning & stats
+scikit-learn
+statsmodels
+prophet
+xgboost
+shap
+pingouin
+
+# Geospatial & APIs
+geopandas
+rasterio
+contextily
+requests
+openpyxl
+
+# Foundation time-series forecasting (require GPU & CUDA for performance)
+timesfm
+chronos-forecasting
+transformers>=4.43,<5
+
+pyarrow
