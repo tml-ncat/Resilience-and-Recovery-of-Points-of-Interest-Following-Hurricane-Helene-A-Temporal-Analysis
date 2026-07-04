@@ -1,9 +1,9 @@
 # Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis
 
 [![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/)
-[![License: Under Review](https://img.shields.io/badge/License-Under--Review-lightgrey.svg)](https://github.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official codebase and analytical pipeline for establishment-level business resilience analysis following Hurricane Helene in western North Carolina. The framework integrates high-resolution point-of-interest (POI) mobility time series, foundation time-series forecasting models, and interpretable machine learning to evaluate recovery deviations.
+This repository contains the official codebase and analytical pipeline for establishment-level business resilience analysis following Hurricane Helene in western North Carolina. The framework integrates high-resolution point-of-interest (POI) mobility time series, foundation time-series forecasting models, and interpretable machine learning to evaluate recovery patterns.
 
 ---
 
@@ -43,7 +43,7 @@ Using **TimesFM (Time-series Foundation Model)**, we generate counterfactual vis
 
 The pipeline runs sequentially through the following analytical steps:
 
-1. **Preprocessing & Filtering:** Cleans Advan/Dewey POI visit sequences, removes duplicate geometries, and filters establishments to the western North Carolina disaster impact region (with Wake and Placebo counties as controls).
+1. **Preprocessing & Filtering:** Cleans Advan/Dewey POI visit sequences, removes duplicate geometries, and filters establishments to the western North Carolina disaster impact region (with Wake and Guilford counties as controls).
 2. **Pre-Event Model Validation:** Evaluates holdout performance (MAE, RMSE, MAPE, and horizon-wise error propagation) across four models: **SARIMAX**, **Prophet**, **Chronos-T5**, and **TimesFM**.
 3. **Counterfactual Forecasting:** Generates long-horizon forecasts for the post-hurricane test period using the best-performing foundation model (TimesFM).
 4. **AUC Metric Calculation:** Computes the normalized signed AUC between the scaled predicted and observed visits. 
@@ -116,7 +116,7 @@ The forecasting foundation models (TimesFM and Chronos-T5) require **GPU-enabled
 
 To run the notebook successfully, prepare the following local files under the `data/` folder:
 
-- **Establishment Mobility Data:** Place the Dewey/Advan visit sequences at `data/raw/final_cleaned_w_cbg.csv`. Required fields: `placekey`, `visits_list`, `GEOID`, `latitude`, `longitude`, `County`, and `naics_code`.
+- **Establishment Mobility Data (Proprietary):** The Advan weekly foot traffic patterns dataset is available through Advan Research's data licensing program (Advan Research. Foot Traffic / Weekly Patterns [Dataset], 2022. https://doi.org/10.82551/X1PP-1F65). The cleaned visit sequences used in this analysis are derived from raw Advan mobility data by stitching together weekly visit counts across the study period (May 1, 2023 to February 2, 2025). Place the processed file at `data/raw/final_cleaned_w_cbg.csv` with the following required fields: `placekey`, `visits_list`, `GEOID`, `latitude`, `longitude`, `County`, and `naics_code`. 
 - **Precipitation Data:** Place the NOAA daily Stage IV CONUS GeoTIFFs under `data/geospatial/nws_precipitation/` using the name format `nws_precip_1day_YYYYMMDD_conus.tif`.
 - **Road Closure Data:** Place the DriveNC Excel spreadsheet at `data/raw/RoadClosureIncidents.xlsx`.
 - **Urban Boundary Shapefiles:** Place the 2020 Census Urban Areas shapefiles under `data/geospatial/tl_2020_us_uac20/`.
@@ -176,12 +176,16 @@ This bar chart shows the impact of removing different feature groups on the pred
 
 If you use this repository or dataset in your academic work, please cite the following manuscript (currently under review):
 
+Gorji Sefidmazgi, A., Gulati, K., & Pandey, V. (2026). Resilience and recovery of points of interest following Hurricane Helene: A temporal analysis. *Transportation Research Record*, *in press*.
+
+
 ```bibtex
 @misc{sefidmazgi2025resilience_timesfm,
   title  = {Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis},
   author = {Sefidmazgi, Ali Gorji and Gulati, Komal and Pandey, Venktesh},
-  year   = {2025},
-  note   = {Manuscript under review},
+  year   = {2026},
+  journal = {Transportation Research Record}
+  note   = {In Press},
   url    = {https://github.com/Aligo/Resilience-and-Recovery-of-Points-of-Interest-Following-Hurricane-Helene-A-Temporal-Analysis}
 }
 ```
@@ -190,6 +194,28 @@ If you use this repository or dataset in your academic work, please cite the fol
 
 ## Acknowledgments & License
 
-- **Funding:** Supported by the Center for Regional and Rural Connected Communities (CR2C2), the U.S. Department of Transportation University Transportation Centers Program, and NSF Grant No. 2200590.
+- **Funding:** Funding for this research was provided by the Center for Regional and Rural Connected Communities (Grant no. 69A3552348304) of the U.S. Department of Transportation, Office of the Assistant Secretary for Research and Technology, University Transportation Centers Program; and National Science Foundation (Grant no. 2200590).
 - **Data Access:** POI mobility data obtained from the Dewey Data platform through the Transportation Institute at North Carolina A&T State University.
-- **License:** <!-- PLACEHOLDER: Add selected license details here (e.g. MIT, Apache 2.0) before publishing publicly --> Under Review.
+- **License:** MIT
+
+MIT License
+
+Copyright (c) 2026 Ali Gorji Sefidmazgi, Komal Gulati, Venktesh Pandey
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
