@@ -1,0 +1,5 @@
+Model,MAE Wins,RMSE Wins
+TimesFM,2769,2756
+Chronos,1619,1296
+SARIMAX,829,1041
+Prophet,454,578

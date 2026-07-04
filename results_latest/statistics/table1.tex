@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Summary statistics for MAE and RMSE across all 5,671 POIs}
+\begin{tabular}{llccccc}
+\toprule
+Metric & Model & Mean & Median & Std & Interquartile Range & Max \\
+\midrule
+MAE & Prophet & 31.58 & 15.97 & 69.30 & 20.37 & 1763.39 \\
+ & SARIMAX & 25.60 & 13.59 & 131.08 & 16.82 & 9262.45 \\
+ & Chronos & 20.03 & 11.84 & 39.57 & 13.61 & 2056.66 \\
+ & \textbf{TimesFM} & \textbf{18.76} & \textbf{11.53} & \textbf{25.82} & \textbf{13.29} & \textbf{586.17} \\
+\midrule
+RMSE & Prophet & 37.63 & 19.58 & 76.82 & 24.78 & 1889.44 \\
+ & SARIMAX & 31.85 & 17.15 & 146.38 & 21.16 & 10270.95 \\
+ & Chronos & 27.00 & 15.42 & 48.68 & 18.90 & 2058.54 \\
+ & \textbf{TimesFM} & \textbf{24.84} & \textbf{14.95} & \textbf{35.84} & \textbf{17.83} & \textbf{691.31} \\
+\bottomrule
+\end{tabular}
+\end{table}

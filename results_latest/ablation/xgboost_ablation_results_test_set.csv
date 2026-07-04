@@ -1,0 +1,9 @@
+ablation,num_original_features,features_used,RMSE,R2,RMSE_change_from_full,R2_change_from_full
+no_county,7,"['mean_before_hurricane', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'elevation_m', 'naics_2d', 'road_closure_dist_closest']",0.14287365163172877,0.24943909607173564,-0.002376482733907115,0.025176504073770256
+no_elevation,7,"['County', 'mean_before_hurricane', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'naics_2d', 'road_closure_dist_closest']",0.1444691835144289,0.2325818157610242,-0.0007809508512069963,0.008319223763058825
+no_road_closure,7,"['County', 'mean_before_hurricane', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'elevation_m', 'naics_2d']",0.14464778324007224,0.23068320466196324,-0.0006023511255636438,0.006420612663997849
+no_precip,5,"['County', 'mean_before_hurricane', 'elevation_m', 'naics_2d', 'road_closure_dist_closest']",0.1450189069503522,0.22673045866568364,-0.00023122741528369684,0.002467866667718255
+full_model,8,"['County', 'mean_before_hurricane', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'elevation_m', 'naics_2d', 'road_closure_dist_closest']",0.14525013436563589,0.2242625919979654,0.0,0.0
+no_mean_before,7,"['County', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'elevation_m', 'naics_2d', 'road_closure_dist_closest']",0.14766142030008433,0.19829289599856426,0.0024112859344484483,-0.025969695999401132
+no_naics,7,"['County', 'mean_before_hurricane', 'precip_sum_week', 'precip_mean_week', 'precip_max_week', 'elevation_m', 'road_closure_dist_closest']",0.15768295104503557,0.08577913787873603,0.012432816679399689,-0.13848345411922935
+top3_only,3,"['precip_max_week', 'elevation_m', 'road_closure_dist_closest']",0.16049076550392394,0.05293072762228934,0.015240631138288052,-0.17133186437567605
