@@ -8,15 +8,21 @@ This repository contains the official codebase and analytical pipeline for estab
 ---
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Methodology](#methodology)
-3. [Repository Directory Structure](#repository-directory-structure)
-4. [Environment Setup](#environment-setup)
-5. [Data Requirements](#data-requirements)
-6. [Pipeline Usage](#pipeline-usage)
-7. [Visualizations & Key Figures](#visualizations--key-figures)
-8. [Citation](#citation)
-9. [Acknowledgments & License](#acknowledgments--license)
+- [Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis](#resilience-and-recovery-of-points-of-interest-following-hurricane-helene-a-temporal-analysis)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Methodology](#methodology)
+  - [Repository Directory Structure](#repository-directory-structure)
+  - [Environment Setup](#environment-setup)
+  - [Data Requirements](#data-requirements)
+  - [Pipeline Usage](#pipeline-usage)
+  - [Visualizations \& Key Figures](#visualizations--key-figures)
+    - [1. Pre-Event Model Validation \& Comparison](#1-pre-event-model-validation--comparison)
+    - [2. Disruption by Business Sector (NAICS)](#2-disruption-by-business-sector-naics)
+    - [3. Explanatory SHAP Analysis](#3-explanatory-shap-analysis)
+    - [4. XGBoost Feature Ablation Analysis](#4-xgboost-feature-ablation-analysis)
+  - [Citation](#citation)
+  - [Acknowledgments \& License](#acknowledgments--license)
 
 ---
 
@@ -29,7 +35,7 @@ Using **TimesFM (Time-series Foundation Model)**, we generate counterfactual vis
 <!-- Methodology Flowchart -->
 ![Methodology Flowchart](results_latest/flowchart4.png)  
 
-*Figure 1: Project workflow overview, from raw Dewey/Advan POI visit sequence processing to foundation model forecasting and interpretable machine learning explanation.*
+*Project workflow overview, from raw Dewey/Advan POI visit sequence processing to foundation model forecasting and interpretable machine learning explanation.*
 
 ---
 
@@ -137,9 +143,12 @@ Once you complete a run, the generated figures will automatically sync to `resul
 ### 1. Pre-Event Model Validation & Comparison
 These plots evaluate model forecasting accuracy over a pre-hurricane holdout window across different forecast horizons.
 
-| MAE Error Propagation | RMSE Error Propagation |
-|:---:|:---:|
-| ![MAE Propagation](results_latest/validation/Combined/combined_MAE.png) | ![RMSE Propagation](results_latest/validation/Combined/combined_RMSE.png) |
+ 
+
+![MAE Propagation](results_latest/validation/Combined/combined_MAE.png)
+
+
+![RMSE Propagation](results_latest/validation/Combined/combined_RMSE.png)
 
 ---
 
