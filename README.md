@@ -35,7 +35,7 @@ Using **TimesFM (Time-series Foundation Model)**, we generate counterfactual vis
 <!-- Methodology Flowchart -->
 ![Methodology Flowchart](results_latest/flowchart4.png)  
 
-*Project workflow overview, from raw Dewey/Advan POI visit sequence processing to foundation model forecasting and interpretable machine learning explanation.*
+*Figure 1: Project workflow overview, from raw Dewey/Advan POI visit sequence processing to foundation model forecasting and interpretable machine learning explanation.*
 
 ---
 
@@ -143,12 +143,9 @@ Once you complete a run, the generated figures will automatically sync to `resul
 ### 1. Pre-Event Model Validation & Comparison
 These plots evaluate model forecasting accuracy over a pre-hurricane holdout window across different forecast horizons.
 
- 
-
-![MAE Propagation](results_latest/validation/Combined/combined_MAE.png)
-
-
-![RMSE Propagation](results_latest/validation/Combined/combined_RMSE.png)
+| MAE Error Propagation | RMSE Error Propagation |
+|:---:|:---:|
+| ![MAE Propagation](results_latest/validation/combined/combined_MAE.png) | ![RMSE Propagation](results_latest/validation/combined/combined_RMSE.png) |
 
 ---
 
