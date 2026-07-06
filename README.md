@@ -143,9 +143,9 @@ Once you complete a run, the generated figures will automatically sync to `resul
 ### 1. Pre-Event Model Validation & Comparison
 These plots evaluate model forecasting accuracy over a pre-hurricane holdout window across different forecast horizons.
 
-| MAE Error Propagation | RMSE Error Propagation |
+<!-- | MAE Error Propagation | RMSE Error Propagation |
 |:---:|:---:|
-| ![MAE Propagation](results_latest/validation/combined/combined_MAE.png) | ![RMSE Propagation](results_latest/validation/combined/combined_RMSE.png) |
+| ![MAE Propagation](results_latest/validation/combined/combined_MAE.png) | ![RMSE Propagation](results_latest/validation/combined/combined_RMSE.png) | -->
 
 ---
 
