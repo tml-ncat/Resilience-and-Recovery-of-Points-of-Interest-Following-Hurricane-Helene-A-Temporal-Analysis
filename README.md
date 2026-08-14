@@ -174,21 +174,39 @@ This bar chart shows the impact of removing different feature groups on the pred
 
 ## Citation
 
-If you use this repository or dataset in your academic work, please cite the following manuscript:
+If you use this work, please cite the published article:
 
-Gorji Sefidmazgi, A., Gulati, K., & Pandey, V. (2026). Resilience and recovery of points of interest following Hurricane Helene: A temporal analysis. *Transportation Research Record*.
+**Ali Gorji Sefidmazgi, Komal Gulati, and Venktesh Pandey.**  
+*Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis.*  
+Transportation Research Record, 2026.  
+[https://doi.org/10.1177/03611981261455026](https://doi.org/10.1177/03611981261455026)
 
+<details>
+<summary><strong>BibTeX (SAGE Publications)</strong></summary>
 
 ```bibtex
-@article{sefidmazgi2026helene,
-  author  = {Gorji Sefidmazgi, Ali and Gulati, Komal and Pandey, Venktesh},
-  title   = {Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis},
+@article{doi:10.1177/03611981261455026,
+  author = {Ali Gorji Sefidmazgi and Komal Gulati and Venktesh Pandey},
+  title = {Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis},
   journal = {Transportation Research Record},
-  year    = {2026},
-  doi     = {10.1177/03611981261455026},
-  url     = {https://doi.org/10.1177/03611981261455026}
+  volume = {0},
+  number = {0},
+  pages = {03611981261455026},
+  year = {2026},
+  doi = {10.1177/03611981261455026},
+  URL = {
+    https://doi.org/10.1177/03611981261455026
+  },
+  eprint = {
+    https://doi.org/10.1177/03611981261455026
+  },
+  abstract = {
+    Natural disasters disrupt transportation accessibility, travel behavior, and local economic activity unevenly, yet limited research examines recovery at the level of individual destinations. This study assessed post-disaster mobility resilience across 5,671 points of interest (POIs) in western North Carolina following Hurricane Helene. Because POIs represent major destinations for employment, healthcare, education, retail, and services, their visitation trajectories provide a practical indicator of transportation functionality and access restoration. Using 616 days of high-resolution mobility data from May 2023 to February 2025 and integrating visitation records with precipitation, elevation, and road-closure data, we developed a forecasting and impact-measurement framework using the TimesFM foundation time-series model to generate counterfactual visitation trajectories and quantify disruption through a normalized signed area under the curve (AUC) metric. Error-propagation diagnostics showed that transformer-based models, particularly TimesFM, outperformed classical approaches for long-horizon POI forecasting. Sector-level differences were substantial. Educational services experienced the largest visitation declines, followed by healthcare and public administration, whereas administrative and waste-management services, real estate, retail, and accommodation showed visitation increases associated with displacement, supply acquisition, and recovery-related demand. An XGBoost model with feature ablation and SHAP analysis identified industry sector and pre-hurricane visitation as the most influential predictors of POI-level AUC. The model achieved an RMSE of 0.1453, providing acceptable explanatory power and meaningful directional insight. Higher pre-hurricane visitation generally reduced predicted disruption, suggesting that high-activity POIs were more likely to remain stable or recover quickly. These resilience-anchor POIs were concentrated in commercial and mixed-use properties, gasoline stations, large-format retail, and higher-education institutions. The proposed framework provides actionable insights for prioritizing access restoration, coordinating recovery resources, identifying critical establishments, and strengthening resilience planning for future extreme events.
+  }
 }
 ```
+
+</details>
 
 ---
 
