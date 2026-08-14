@@ -5,6 +5,9 @@
 
 This repository contains the official codebase and analytical pipeline for establishment-level business resilience analysis following Hurricane Helene in western North Carolina. The framework integrates high-resolution point-of-interest (POI) mobility time series, foundation time-series forecasting models, and interpretable machine learning to evaluate recovery patterns.
 
+📄 **Published Paper:**  
+[Resilience and Recovery of Points of Interest Following Hurricane Helene: A Temporal Analysis](https://doi.org/10.1177/03611981261455026)  
+*Transportation Research Record*, 2026
 ---
 
 ## Table of Contents
